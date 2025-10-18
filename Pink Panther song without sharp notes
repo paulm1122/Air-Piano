@@ -1,0 +1,11 @@
+// This is the a new song I added. Daniel it's the pink panther theme song without the sharp notes. 
+int melody_pink_panther[] = {
+  LED_Mi, LED_Sol, LED_Mi, LED_Re, LED_Mi, LED_Re, LED_Mi,
+  LED_Re, LED_Re, LED_Re, LED_Sol, LED_La, LED_Mi,
+  LED_Sol, LED_Mi, LED_Re, LED_Mi, LED_Re, LED_Mi, LED_Mi,
+  LED_Mi, LED_Mi, LED_Sol, LED_Mi, LED_Re, LED_Mi, LED_Mi,
+  LED_Mi, LED_Re, LED_Re, LED_Sol, LED_Mi, LED_Re, LED_Mi,
+  LED_Re, LED_Mi, LED_Mi, LED_Mi, LED_Re, LED_Re, LED_Mi,
+  LED_Re, LED_Mi, LED_Mi, LED_Sol
+};
+int length_pink_panther = sizeof(melody_pink_panther) / sizeof(melody_pink_panther[0]);
