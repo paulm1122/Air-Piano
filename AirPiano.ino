@@ -92,6 +92,14 @@ int melody_pink_panther[] = {
 };
 int length_pink_panther = sizeof(melody_pink_panther) / sizeof(melody_pink_panther[0]);
 
+//New song "Waltz in A Minor"
+int melody_waltz[] = {
+ LED_Mi, LED_La, LED_Ti, LED_Do_High, LED_Do_High, LED_Re, LED_Mi, LED_Fa,
+ LED_Ti, LED_Do_High, LED_Re, LED_La, LED_Sol, LED_Fa, LED_Mi, LED_DS5,     LED_Mi, LED_La, LED_Ti, LED_Do_High, LED_Do_High, LED_Re, LED_LED_Mi, LED_Fa,
+ LED_Ti, LED_Do_High, LED_Re, LED_La, LED_Sol, LED_Ti, LED_Do_High
+};
+int length_waltz = sizeof(melody_waltz) / sizeof(melody_waltz[0]);
+
 int* current_melody = melody_mary;
 int current_melody_length = length_mary;
 
@@ -182,6 +190,16 @@ void loop() {
       current_melody_length = length_yankee_doodle;
       free_play_mode = false;
       Serial.println("Now playing: Yankee Doodle");
+    } else if (input == '5') {
+      current_melody = melody_pink_panther;
+      current_melody_length = length_pink_panther;
+      free_play_mode = false;
+      Serial.println("Now playing: Pink Panther Theme Song");
+    } else if (input == '6') {
+      current_melody = melody_waltz;
+      current_melody_length = length_waltz;
+      free_play_mode = false;
+      Serial.println("Now playing: Waltz in A Minor");
     } else if (input == '0') {
       free_play_mode = true;
       Serial.println("🎹 Free play mode activated!");
