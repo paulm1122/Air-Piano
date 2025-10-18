@@ -2,13 +2,18 @@
 #define TRIGGER_PIN 4      
 
 #define LED_Do 13
+#define LED_CS5 5
 #define LED_Re 12
-#define LED_Mi 11 
+#define LED_DS5 A4
+#define LED_Mi 11
 #define LED_Fa 10
+#define LED_FS5 A3
 #define LED_Sol 9
-#define LED_La 8 
+#define LED_GS5 A2
+#define LED_La 8
+#define LED_AS5 A1
 #define LED_Si 7  
-#define LED_Do_High 6 
+#define LED_Do_High 6
 
 #define BUZZER_PIN 2
 
