@@ -5,7 +5,7 @@
 #define LED_Re 12
 #define LED_Mi 11 
 #define LED_Fa 10
-#define LED_Sol 9 
+#define LED_Sol 9
 #define LED_La 8 
 #define LED_Si 7  
 #define LED_Do_High 6 
@@ -24,14 +24,20 @@ const int time_delay = 500;
 // 🎵 Notes (8 notes: Do Re Mi Fa Sol La Si Do)
 int notes[] = {
   523,  // Do (C5)
+  554,  // C#5
   587,  // Re (D5)
+  622,  // D#5
   659,  // Mi (E5)
   698,  // Fa (F5)
+  740,  // F#5
   784,  // Sol (G5)
+  831,  // G#5
   880,  // La (A5)
+  932,  // A#5
   988,  // Si (B5)
-  1046  // Do (C6) 
+  1046  // Do (C6)
 };
+
 
 // 🎵 SONGS
 int melody_mary[] = {
