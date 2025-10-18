@@ -80,6 +80,18 @@ int melody_yankee_doodle[] = {
 };
 int length_yankee_doodle = sizeof(melody_yankee_doodle) / sizeof(melody_yankee_doodle[0]);
 
+// This is a new song I added. It's the Pink Panther theme song without the sharp notes. ~Daniel 
+int melody_pink_panther[] = {
+  LED_Mi, LED_Sol, LED_Mi, LED_Re, LED_Mi, LED_Re, LED_Mi,
+  LED_Re, LED_Re, LED_Re, LED_Sol, LED_La, LED_Mi,
+  LED_Sol, LED_Mi, LED_Re, LED_Mi, LED_Re, LED_Mi, LED_Mi,
+  LED_Mi, LED_Mi, LED_Sol, LED_Mi, LED_Re, LED_Mi, LED_Mi,
+  LED_Mi, LED_Re, LED_Re, LED_Sol, LED_Mi, LED_Re, LED_Mi,
+  LED_Re, LED_Mi, LED_Mi, LED_Mi, LED_Re, LED_Re, LED_Mi,
+  LED_Re, LED_Mi, LED_Mi, LED_Sol
+};
+int length_pink_panther = sizeof(melody_pink_panther) / sizeof(melody_pink_panther[0]);
+
 int* current_melody = melody_mary;
 int current_melody_length = length_mary;
 
