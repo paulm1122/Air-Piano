@@ -12,7 +12,7 @@
 #define LED_GS5 A2
 #define LED_La 8
 #define LED_AS5 A1
-#define LED_Si 7  
+#define LED_Ti 7  
 #define LED_Do_High 6
 
 #define BUZZER_PIN 2
@@ -75,7 +75,7 @@ int length_bus = sizeof(melody_bus) / sizeof(melody_bus[0]);
 int melody_yankee_doodle[] = {
   LED_Fa, LED_Fa, LED_Sol, LED_La, LED_Fa, LED_La, LED_Sol,
   LED_Fa, LED_Fa, LED_Sol, LED_La, LED_Fa, LED_Mi,
-  LED_Fa, LED_Fa, LED_Sol, LED_La, LED_Si, LED_La, LED_Sol,
+  LED_Fa, LED_Fa, LED_Sol, LED_La, LED_Ti, LED_La, LED_Sol,
   LED_Fa, LED_Mi, LED_Do, LED_Re, LED_Mi, LED_Fa, LED_Fa
 };
 int length_yankee_doodle = sizeof(melody_yankee_doodle) / sizeof(melody_yankee_doodle[0]);
@@ -95,7 +95,7 @@ int length_pink_panther = sizeof(melody_pink_panther) / sizeof(melody_pink_panth
 //New song "Waltz in A Minor"
 int melody_waltz[] = {
  LED_Mi, LED_La, LED_Ti, LED_Do_High, LED_Do_High, LED_Re, LED_Mi, LED_Fa,
- LED_Ti, LED_Do_High, LED_Re, LED_La, LED_Sol, LED_Fa, LED_Mi, LED_DS5,     LED_Mi, LED_La, LED_Ti, LED_Do_High, LED_Do_High, LED_Re, LED_LED_Mi, LED_Fa,
+ LED_Ti, LED_Do_High, LED_Re, LED_La, LED_Sol, LED_Fa, LED_Mi, LED_DS5,     LED_Mi, LED_La, LED_Ti, LED_Do_High, LED_Do_High, LED_Re, LED_Mi, LED_Fa,
  LED_Ti, LED_Do_High, LED_Re, LED_La, LED_Sol, LED_Ti, LED_Do_High
 };
 int length_waltz = sizeof(melody_waltz) / sizeof(melody_waltz[0]);
@@ -140,7 +140,7 @@ void turn_off_all_leds() {
   digitalWrite(LED_GS5, LOW);
   digitalWrite(LED_La, LOW);
   digitalWrite(LED_AS5, LOW);
-  digitalWrite(LED_Si, LOW);
+  digitalWrite(LED_Ti, LOW);
   digitalWrite(LED_Do_High, LOW);  // Turn off high Do
 }
 
@@ -160,7 +160,7 @@ void setup() {
   pinMode(LED_GS5, OUTPUT);
   pinMode(LED_La, OUTPUT);
   pinMode(LED_AS5, OUTPUT);
-  pinMode(LED_Si, OUTPUT);
+  pinMode(LED_Ti, OUTPUT);
   pinMode(LED_Do_High, OUTPUT);  
   pinMode(BUZZER_PIN, OUTPUT);
 
