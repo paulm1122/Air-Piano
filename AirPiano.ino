@@ -130,25 +130,36 @@ double get_distance() {
 
 void turn_off_all_leds() {
   digitalWrite(LED_Do, LOW);
+  digitalWrite(LED_CS5, LOW);
   digitalWrite(LED_Re, LOW);
+  digitalWrite(LED_DS5, LOW);
   digitalWrite(LED_Mi, LOW);
   digitalWrite(LED_Fa, LOW);
+  digitalWrite(LED_FS5, LOW);
   digitalWrite(LED_Sol, LOW);
+  digitalWrite(LED_GS5, LOW);
   digitalWrite(LED_La, LOW);
+  digitalWrite(LED_AS5, LOW);
   digitalWrite(LED_Si, LOW);
   digitalWrite(LED_Do_High, LOW);  // Turn off high Do
 }
+
 
 void setup() {
   Serial.begin(115200);
   pinMode(ECHO_PIN, INPUT);   
   pinMode(TRIGGER_PIN, OUTPUT);
   pinMode(LED_Do, OUTPUT);
+  pinMode(LED_CS5, OUTPUT);
   pinMode(LED_Re, OUTPUT);
+  pinMode(LED_DS5, OUTPUT);
   pinMode(LED_Mi, OUTPUT);
   pinMode(LED_Fa, OUTPUT);
+  pinMode(LED_FS5, OUTPUT);
   pinMode(LED_Sol, OUTPUT);
+  pinMode(LED_GS5, OUTPUT);
   pinMode(LED_La, OUTPUT);
+  pinMode(LED_AS5, OUTPUT);
   pinMode(LED_Si, OUTPUT);
   pinMode(LED_Do_High, OUTPUT);  
   pinMode(BUZZER_PIN, OUTPUT);
