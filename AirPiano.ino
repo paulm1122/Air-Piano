@@ -171,6 +171,8 @@ void setup() {
   Serial.println("2 - Twinkle Twinkle Little Star");
   Serial.println("3 - The Wheels on the Bus");
   Serial.println("4 - Yankee Doodle");
+  Serial.println("5 - Pink Panther Theme Song");
+  Serial.println("6 - Waltz in A Minor");
   Serial.println("0 - Free play mode (Air Piano)");
 }
 
