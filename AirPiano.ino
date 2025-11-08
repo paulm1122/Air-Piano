@@ -1,17 +1,17 @@
 #define ECHO_PIN 3       
 #define TRIGGER_PIN 4      
 
-#define LED_Do 13
-#define LED_CS5 5
-#define LED_Re 12
-#define LED_DS5 A4
-#define LED_Mi 11
-#define LED_Fa 10
-#define LED_FS5 A3
-#define LED_Sol 9
-#define LED_GS5 A2
-#define LED_La 8
-#define LED_AS5 A1
+#define LED_Do 18 //A4
+#define LED_CS5 17 //A3
+#define LED_Re 16 //A2
+#define LED_DS5 15 //A1
+#define LED_Mi 14 //A0
+#define LED_Fa 13 
+#define LED_FS5 12
+#define LED_Sol 11
+#define LED_GS5 10
+#define LED_La 9
+#define LED_AS5 8
 #define LED_Ti 7  
 #define LED_Do_High 6
 
@@ -166,13 +166,11 @@ void setup() {
 
   attachInterrupt(digitalPinToInterrupt(ECHO_PIN), echo_pin_interrupt, CHANGE);
 
-  Serial.println("🎶 Select a song to play:");
+  Serial.println(" Select a song to play:");
   Serial.println("1 - Mary Had a Little Lamb");
   Serial.println("2 - Twinkle Twinkle Little Star");
   Serial.println("3 - The Wheels on the Bus");
   Serial.println("4 - Yankee Doodle");
-  Serial.println("5 - Pink Panther Theme Song");
-  Serial.println("6 - Waltz in A Minor");
   Serial.println("0 - Free play mode (Air Piano)");
 }
 
@@ -215,7 +213,7 @@ void loop() {
       Serial.println("Now playing: Waltz in A Minor");
     } else if (input == '0') {
       free_play_mode = true;
-      Serial.println("🎹 Free play mode activated!");
+      Serial.println("Free play mode activated!");
     } else {
       Serial.println("Invalid choice. Please enter 0, 1, 2, 3, or 4.");
     }
@@ -237,18 +235,23 @@ void loop() {
     double distance = get_distance();
     int note_index = -1;
 
-    if (distance > 2 && distance <= 10) note_index = 0;
-    else if (distance > 10 && distance <= 20) note_index = 1;
-    else if (distance > 20 && distance <= 30) note_index = 2;
-    else if (distance > 30 && distance <= 40) note_index = 3;
-    else if (distance > 40 && distance <= 50) note_index = 4;
-    else if (distance > 50 && distance <= 60) note_index = 5;
-    else if (distance > 60 && distance <= 70) note_index = 6;
-    else if (distance > 70 && distance <= 80) note_index = 7;  // NEW: High Do
+    if (distance > 2 && distance <= 5) note_index = 0;
+    else if (distance > 5 && distance <= 10) note_index = 1;
+    else if (distance > 10 && distance <= 15) note_index = 2;
+    else if (distance > 15 && distance <= 20) note_index = 3;
+    else if (distance > 20 && distance <= 25) note_index = 4;
+    else if (distance > 25 && distance <= 30) note_index = 5;
+    else if (distance > 30 && distance <= 35) note_index = 6;
+    else if (distance > 35 && distance <= 40) note_index = 7;
+    else if (distance > 40 && distance <= 45) note_index = 8;
+    else if (distance > 45 && distance <= 50) note_index = 9;
+    else if (distance > 50 && distance <= 55) note_index = 10;
+    else if (distance > 55 && distance <= 60) note_index = 11;
+    else if (distance > 60 && distance <= 65) note_index = 12;  // NEW: High Do
 
     if (note_index != -1) {
       int led;
-      if (note_index == 7) {
+      if (note_index == 12) {
         led = LED_Do_High;  // NEW High Do
       } else {
         led = LED_Do - note_index;
@@ -275,3 +278,4 @@ void loop() {
     }
   }
 }
+
